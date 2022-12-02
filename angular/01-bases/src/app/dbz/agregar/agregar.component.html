@@ -1,0 +1,28 @@
+<h3>Agregar <small>{{nuevo.nombre}}</small></h3>
+<hr>
+<!-- en <form (submit)="agregar( $event )"> con $event queremos leer el evento que dispara el submit  -->
+<!-- si se ponen corchetes es indicar que en lado del componente hay algo que quiero enlazarle -->
+<!-- si se ponen paréntesis es porque se quiere escuchar un evento   -->
+<!-- (input) - cuando cambie -->
+<!-- [value] - para poner un valor dentro del formulario -->
+        <!-- [value]="nuevo.nombre"
+        (input)="cambiarNombre( $event )" -->
+
+<form (ngSubmit)="agregar()"> 
+    <input 
+        type="text" 
+        placeholder="Nombre"
+        name="nombre"
+        [(ngModel)]="nuevo.nombre"
+    />
+    <input 
+        type="number" 
+        placeholder="Poder"
+        name="poder"
+        [(ngModel)]="nuevo.poder"
+    />
+
+    <button type="submit">
+        Agregar
+    </button>
+</form>
