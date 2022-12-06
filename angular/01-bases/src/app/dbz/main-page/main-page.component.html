@@ -4,12 +4,9 @@
 <div class="row">
     <div class="col">
         <!-- [personajes] (de personajes component) ="personajes" (el de main page) -->
-        <app-personajes [data]="personajes"></app-personajes>
+        <app-personajes></app-personajes>
     </div>
     <div class="col">
-        <app-agregar 
-            [nuevoInput]="nuevo"
-            (onNuevoPersonaje)="agregarNuevoPersonaje( $event )"
-        ></app-agregar>
+        <app-agregar [nuevoInput]="nuevo"></app-agregar>
     </div>
 </div>
